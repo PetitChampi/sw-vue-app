@@ -64,6 +64,10 @@
     grid-template-columns: 1fr;
   }
 }
+.list {
+ grid-template-columns: 1fr;
+}
+
 .profile-grid--item:hover {
   transform: translateY(-5px);
 }
