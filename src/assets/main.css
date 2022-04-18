@@ -54,7 +54,6 @@
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 15px -7px #4C401C;
-  text-decoration: none;
   color: #4c4c4c;
   visibility: visible;
   transition: opacity ease 0.5s, transform ease .3s;
@@ -102,4 +101,40 @@ body .wrapper {
 }
 a {
   text-decoration: none;
+}
+
+.btn-back {
+  background-color: #967309;
+  color: #fff;
+  border-radius: 100px;
+  padding: 10px 20px;
+  display: inline-block;
+  margin: 20px 0 30px;
+}
+.vehicle-card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px -7px #4C401C;
+  color: #4c4c4c;
+  padding: 15px 20px;
+}
+.vehicle-card-header--price {
+  font-weight: 400;
+  color: #967309;
+}
+.vehicle-card-body {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.vehicle-card-body-section p {
+  font-size: .8rem;
+  color: #727272;
+}
+.vehicle-card-body-section span {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-weight: 400;
 }

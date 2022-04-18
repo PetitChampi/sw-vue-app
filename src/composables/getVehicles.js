@@ -9,7 +9,7 @@ const getVehicles = () => {
       .then(res => res.json())
       .then(data => {
         vehicles.value = data.results.map(item => {
-          return { ...item, id: item.url.slice(-2, -1) }
+          return { ...item, id: item.url.slice(item.url.lastIndexOf('/', 31) + 1, -1) }
         })
       })
       .catch(err => error.value = err.message)
