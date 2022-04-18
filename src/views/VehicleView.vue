@@ -69,14 +69,19 @@
         </div> <!-- .vehicle-card-body -->
       </div> <!-- .vehicle-card -->
     </div>
+    <div v-else>
+      <Spinner />
+    </div>
   </div>
 </template>
 
 <script>
+import Spinner from '@/components/Spinner.vue'
 import { useRoute } from 'vue-router'
 import getVehicle from '@/composables/getVehicle'
 
 export default {
+  components: { Spinner },
   setup() {
     const route = useRoute()
 

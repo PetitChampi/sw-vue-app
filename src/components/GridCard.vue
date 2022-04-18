@@ -18,9 +18,6 @@
 
 <script>
 export default {
-  props: ['vehicle'],
-  setup(props) {
-
-  }
+  props: ['vehicle']
 }
 </script>
