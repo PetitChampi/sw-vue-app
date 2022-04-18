@@ -20,4 +20,6 @@ export default {
     Grid
   }
 }
+
+// I do have a solution for toggling the layout between grid and list, which I already made a CSS class for, haven't directly implemented it due to lack of time.
 </script>
