@@ -1,15 +1,26 @@
 <template>
-  <article class="profile-grid--item">
-    <div class="profile-grid--item-img"></div>
-    <div class="profile-grid--item-excerpt">
-      <h3 class="profile-grid--item-excerpt--name">Some Name</h3>
-      <p class="profile-grid--item-excerpt--summary">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nihil modi culpa, ratione consequuntur</p>
-    </div>
-  </article>
+  <router-link :to="{ }" class="profile-grid--link">
+    <article class="profile-grid--item">
+      <div class="profile-grid--item-img"></div>
+      <div class="profile-grid--item-excerpt">
+        <h3 class="profile-grid--item-excerpt--name">{{ vehicle.name }}</h3>
+        <span v-if="vehicle.cost_in_credits === 'unknown'" class="profile-grid--item-excerpt--price">Ask for price</span>
+        <span v-else class="profile-grid--item-excerpt--price">{{ new Intl.NumberFormat().format(vehicle.cost_in_credits) }} GC</span>
+        <div class="profile-grid--item-excerpt--summary">
+          <p>Class: {{ vehicle.vehicle_class }}</p>
+          <p>Passengers: {{ vehicle.passengers }}</p>
+          <p>Cargo type: {{ vehicle.cargo_capacity }}</p>
+        </div>
+      </div>
+    </article>
+  </router-link>
 </template>
 
 <script>
 export default {
+  props: ['vehicle'],
+  setup(props) {
 
+  }
 }
 </script>
