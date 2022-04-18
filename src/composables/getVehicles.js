@@ -7,7 +7,11 @@ const getVehicles = () => {
   const load = async () => {
     await fetch('https://swapi.dev/api/vehicles')
       .then(res => res.json())
-      .then(data => vehicles.value = data.results)
+      .then(data => {
+        vehicles.value = data.results.map(item => {
+          return { ...item, id: item.url.slice(-2, -1) }
+        })
+      })
       .catch(err => error.value = err.message)
   }
 

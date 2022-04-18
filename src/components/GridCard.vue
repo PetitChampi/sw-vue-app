@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="{ }" class="profile-grid--link">
+  <router-link :to="{ name: 'vehicle', params: { id: vehicle.id }}" class="profile-grid--link">
     <article class="profile-grid--item">
       <div class="profile-grid--item-img"></div>
       <div class="profile-grid--item-excerpt">
