@@ -1,4 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;700&display=swap");
+
+.header {
+  text-align: center;
+  margin-top: 30px;
+}
+.header--subtitle {
+  text-transform: uppercase;
+  font-size: .8rem;
+  letter-spacing: .05rem;
+  word-spacing: .7em;
+  font-weight: 400;
+  color: #4c4c4c;
+}
+.header--title {
+  font-size: 3rem;
+  line-height: 120%;
+}
+
 .search {
   position: sticky;
   top: 30px;
@@ -73,12 +91,12 @@
 }
 .profile-grid--item-excerpt--price {
   font-size: .8rem;
-  font-weight: 400;
-  color: #967309;
+  font-weight: 500;
+  color: #525c9e;
 }
 .profile-grid--item-excerpt--summary {
   font-size: 0.8rem;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 * {
@@ -88,7 +106,7 @@
 }
 
 body {
-  background-color: #ffd85f;
+  background-color: #c7ceff;
   color: #343434;
   font-family: "spartan", Arial, Helvetica, sans-serif;
   line-height: 1.5;
@@ -104,7 +122,7 @@ a {
 }
 
 .btn-back {
-  background-color: #967309;
+  background-color: #525c9e;
   color: #fff;
   border-radius: 100px;
   padding: 10px 20px;
@@ -120,8 +138,8 @@ a {
   padding: 15px 20px;
 }
 .vehicle-card-header--price {
-  font-weight: 400;
-  color: #967309;
+  font-weight: 500;
+  color: #525c9e;
 }
 .vehicle-card-body {
   margin-top: 50px;
