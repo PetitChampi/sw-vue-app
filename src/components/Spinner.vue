@@ -17,3 +17,9 @@
   to { -webkit-transform: rotateZ(360deg);  }
 }
 </style>
+
+<script>
+export default {
+  name: 'Spinner'
+}
+</script>

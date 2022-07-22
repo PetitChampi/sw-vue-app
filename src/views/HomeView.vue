@@ -9,17 +9,16 @@
   </div>
 </template>
 
-<script>
-import Search from '@/components/Search.vue'
-import Grid from '@/components/Grid.vue'
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Grid from '@/components/Grid.vue';
+import Search from '@/components/Search.vue';
 
-export default {
+export default defineComponent({
   name: 'HomeView',
   components: {
+    Grid,
     Search,
-    Grid
   }
-}
-
-// I do have a solution for toggling the layout between grid and list, which I already made a CSS class for, haven't directly implemented it due to lack of time.
+});
 </script>

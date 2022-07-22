@@ -10,6 +10,9 @@
 </template>
 
 <script>
+export default {
+  name: 'Search'
+}
   // I made attempts here, using a custom event, two-way data binding and a computed property for the search results.
   // I haven't been succesful due to lack of time (and a bit of confusion).
 

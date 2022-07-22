@@ -10,13 +10,14 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import GridCard from './GridCard.vue'
 import Spinner from './Spinner.vue'
 import { useVehicles } from '@/store/vehicleStore'
 import { storeToRefs } from 'pinia'
+import { defineComponent } from 'vue-demi'
 
-export default {
+export default defineComponent({
   props: ['vehicles'],
   components: {
     GridCard,
@@ -31,5 +32,5 @@ export default {
 
     return { vehicles, error }
   }
-}
+});
 </script>
