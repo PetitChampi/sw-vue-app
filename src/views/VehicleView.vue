@@ -3,8 +3,8 @@
     <router-link :to="{ name: 'home' }" class="btn-back">
       &lt; Back
     </router-link>
-    <div v-if="error">{{ error }}</div>
-    <div v-if="vehicle">
+    <div v-if="!vehicle && error">{{ error }}</div>
+    <div v-if="vehicle && vehicle.id === $route.params.id">
       <div class="vehicle-card">
         <header class="vehicle-card-header">
           <h1 class="vehicle-card-header--title">{{ vehicle.name }}</h1>
@@ -78,16 +78,19 @@
 <script>
 import Spinner from '@/components/Spinner.vue'
 import { useRoute } from 'vue-router'
-import getVehicle from '@/composables/getVehicle'
+import { useVehicles } from '@/store/vehicleStore'
+import { storeToRefs } from 'pinia'
 
 export default {
   components: { Spinner },
   setup() {
     const route = useRoute()
 
-    const { vehicle, error, load } = getVehicle(route.params.id)
+    const vehiclesStore = useVehicles()
 
-    load()
+    const { vehicle, error } = storeToRefs(vehiclesStore)
+    
+    vehiclesStore.loadVehicle(route.params.id)
 
     return { vehicle, error }
   }

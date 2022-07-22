@@ -3,7 +3,7 @@
     <div v-for="vehicle in vehicles" :key="vehicle.url">
       <GridCard :vehicle="vehicle" />
     </div>
-    <span>{{ error }}</span>
+    <span v-if="!vehicles.length && error">{{ error }}</span>
   </div>
   <div v-else>
     <Spinner />
@@ -13,7 +13,8 @@
 <script>
 import GridCard from './GridCard.vue'
 import Spinner from './Spinner.vue'
-import getVehicles from '@/composables/getVehicles'
+import { useVehicles } from '@/store/vehicleStore'
+import { storeToRefs } from 'pinia'
 
 export default {
   props: ['vehicles'],
@@ -22,9 +23,11 @@ export default {
     Spinner
   },
   setup() {
-    const { vehicles, error, load } = getVehicles()
+    const vehiclesStore = useVehicles()
+
+    const { vehicles, error } = storeToRefs(vehiclesStore)
     
-    load()
+    vehiclesStore.loadAllVehicles()
 
     return { vehicles, error }
   }
