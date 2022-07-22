@@ -9,7 +9,7 @@
         <div class="profile-grid--item-excerpt--summary">
           <p>Class: {{ vehicle.vehicle_class }}</p>
           <p>Passengers: {{ vehicle.passengers }}</p>
-          <p>Cargo type: {{ vehicle.cargo_capacity }}</p>
+          <p>Cargo capacity: {{ vehicle.cargo_capacity }}</p>
         </div>
       </div>
     </article>
