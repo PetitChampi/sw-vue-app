@@ -75,7 +75,7 @@
   </div>
 </template>
 
-<script>
+<script lamg="ts">
 import Spinner from '@/components/Spinner.vue'
 import { useRoute } from 'vue-router'
 import { useVehicles } from '@/store/vehicleStore'

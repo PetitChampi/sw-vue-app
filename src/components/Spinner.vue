@@ -2,6 +2,12 @@
   <div class="spin"></div>
 </template>
 
+<script lang="ts">
+export default {
+  name: 'Spinner'
+}
+</script>
+
 <style>
 .spin {
   display: block;
@@ -17,9 +23,3 @@
   to { -webkit-transform: rotateZ(360deg);  }
 }
 </style>
-
-<script>
-export default {
-  name: 'Spinner'
-}
-</script>
